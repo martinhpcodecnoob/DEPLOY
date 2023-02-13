@@ -1,0 +1,54 @@
+.total{
+    display: flex;
+    flex-direction: column;
+}
+
+.carrusel{
+    width: 50%;
+    max-width: 1300px;
+    margin: auto;
+    top: 20px;
+}
+
+@media screen and (max-width:960px){
+    .carrusel{
+        width: 75%;
+    }
+}
+
+.seccionCategory{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.borderCategory{
+    width: 70%;
+    max-width: 1300px;
+    margin: auto;
+    top: 60x;
+    display: flex;
+}
+
+.lineMargin{
+    background-color: #303030;
+    width: 100%;
+    height: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.titleCategory{
+    color: white;
+    display: flex;
+    font-family: 'Noto Serif', serif;
+    font-size: 25px;
+}
+
+.cardCategory{
+    max-width: 1300px;
+    width: 70%;
+    margin: auto;
+}
+

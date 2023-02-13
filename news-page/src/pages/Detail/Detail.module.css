@@ -1,0 +1,44 @@
+.totalDetail{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.titleDetail{
+    width: 70%;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    /* font-size: 3.5rem; */
+    font-size: 4.5vw;
+}
+@media screen and (max-width:960px){
+    .titleDetail{
+        font-size: 2rem;
+        text-align: start;
+    }
+}
+
+.imageDetail{
+    width: 100%;
+}
+
+.imageDetail img{
+    width: 80%;
+}
+
+.descripDatail{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+}
+
+.redirectDetail{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.redirectDetail a:hover{
+    color: crimson;
+}

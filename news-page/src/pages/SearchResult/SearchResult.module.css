@@ -1,0 +1,57 @@
+.main{
+    max-width: 1300px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    margin: auto;
+}
+
+.paginate{
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    animation: delay .2s, paginateIn .8s .2s ease-in-out;
+}
+
+.newRedirect{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top:22em;
+}
+
+.btnCreateA button{
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color:#fef9f1;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.btnCreateA button:hover{
+    background-color: #9b8972;
+    box-shadow: 0px 15px 20px #9b8972;
+    color: #fef9f1;
+    transform: translateY(5px);
+}
+
+.btnCreateA button:active{
+    transform: translateY(-1px);
+}

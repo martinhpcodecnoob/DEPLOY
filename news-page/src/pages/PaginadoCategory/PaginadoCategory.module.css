@@ -1,0 +1,11 @@
+.totalPagiCate{
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+/* .cardsCategory{
+    width: 100%;
+} */
