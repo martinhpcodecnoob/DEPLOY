@@ -234,6 +234,11 @@ const infoTotal = async() =>{
     return newTotal
 }
 
+const infoTotalBusqueda = async() =>{
+    const busqueda = await BusquedaApi()
+    return busqueda
+}
+
 
 // infoTotal();
 // NoticiasApi();
@@ -243,4 +248,5 @@ const infoTotal = async() =>{
 module.exports = {
     BusquedaApi,
     infoTotal,
+    infoTotalBusqueda
 }
