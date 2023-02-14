@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const {busquedaNEW} = require('../controller/newsApi.js')
+const {BusquedaApi} = require('../controller/newsApi.js')
 const {Search} = require('../db.js')
 
 const router = Router();
