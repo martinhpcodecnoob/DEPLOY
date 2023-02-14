@@ -30,7 +30,7 @@ router.get('/:buscar',async(req,res)=>{
 
         // const busquedaTotal = await BusquedaApi(buscar)
         
-        const busquedaTotal = await BusquedaApi(buscar)
+        const busquedaTotal = await BusquedaApi()
         res.send(busquedaTotal)
 
         // }else{

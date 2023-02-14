@@ -194,7 +194,7 @@ const BusquedaApi = async(busqueda) => {
     try {
         const extractApi = await axios({
             method:'GET',
-            url:`https://newsapi.org/v2/everything?q=${busqueda}&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
+            url:`https://newsapi.org/v2/everything?q=muertes&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
         })
 
         const API = await extractApi.data.articles.map((element) => {
