@@ -194,12 +194,12 @@ const BusquedaApi = async(busqueda) => {
     try {
         const extractApi = await axios({
             method:'GET',
-            url:`https://newsapi.org/v2/everything?q=muertes&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
+            url:`https://newsapi.org/v2/everything?q=${busqueda}&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
         })
 
         const API = await extractApi.data.articles.map((element) => {
             return{
-                category: 'negocios',
+                category: 'busqueda',
                 name:element.source.name ? element.source.name.slice(0,254) : "",
                 author:element.author ? element.author.slice(0,254) : "",
                 title:element.title ? element.title.slice(0,254) : "",
@@ -234,10 +234,7 @@ const infoTotal = async() =>{
     return newTotal
 }
 
-const infoTotalBusqueda = async() =>{
-    const busqueda = await BusquedaApi()
-    return busqueda
-}
+
 
 
 // infoTotal();
@@ -248,5 +245,4 @@ const infoTotalBusqueda = async() =>{
 module.exports = {
     BusquedaApi,
     infoTotal,
-    infoTotalBusqueda
 }

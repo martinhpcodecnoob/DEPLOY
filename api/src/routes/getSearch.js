@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const {BusquedaApi,infoTotal,infoTotalBusqueda} = require('../controller/newsApi.js')
+const {BusquedaApi} = require('../controller/newsApi.js')
 const {Search} = require('../db.js')
 
 const router = Router();
@@ -30,7 +30,7 @@ router.get('/:buscar',async(req,res)=>{
 
         // const busquedaTotal = await BusquedaApi(buscar)
         
-        const busquedaTotal = await infoTotalBusqueda()
+        const busquedaTotal = await BusquedaApi(buscar)
         if (busquedaTotal.length < 1) {
             res.status(400).send({error:"Algo anda mal"})
         }else{
