@@ -199,8 +199,8 @@ const BusquedaApi = async(busqueda) => {
 
         const API = await extractApi.data.articles.map((element) => {
             return{
-                category: 'busqueda',
-                name:element.source.name ? element.source.name.slice(0,254): "",
+                category: 'negocios',
+                name:element.source.name ? element.source.name.slice(0,254) : "",
                 author:element.author ? element.author.slice(0,254) : "",
                 title:element.title ? element.title.slice(0,254) : "",
                 description: element.description ? element.description.slice(0,254):"",
