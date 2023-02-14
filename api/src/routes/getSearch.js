@@ -32,7 +32,7 @@ router.get('/:buscar',async(req,res)=>{
         
         const busquedaTotal = await infoTotalBusqueda()
         if (busquedaTotal.length < 1) {
-            res.send(400).send({error:"Algo anda mal"})
+            res.status(400).send({error:"Algo anda mal"})
         }else{
             res.send(busquedaTotal)
         }
