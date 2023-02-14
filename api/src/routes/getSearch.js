@@ -59,7 +59,7 @@ router.get('/:buscar',async(req,res)=>{
         // }
 
             const fechaActual = add_subtract_days(-2)
-            try {
+    
                 const extractApi = await axios({
                     method:'GET',
                     url:`https://newsapi.org/v2/everything?q=${buscar}&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
@@ -77,15 +77,8 @@ router.get('/:buscar',async(req,res)=>{
                         publishedAt:element.publishedAt ? fechaHora(element.publishedAt) : "",
                     }
                 })
-                // console.log(API);
-            } catch (error) {
-                let arrayError = [{
-                    mensaje:"Se excedio las peticiones en busqueda",
-                    error:error
-                }]
-                return arrayError
-            }
             res.send(API)
+    
         
     } catch (error) {
         res.status(400).send({error:error})
