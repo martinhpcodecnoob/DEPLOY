@@ -242,6 +242,5 @@ const infoTotal = async() =>{
 
 module.exports = {
     BusquedaApi,
-    totalResultado,
     infoTotal,
 }
