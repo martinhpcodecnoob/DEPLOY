@@ -27,8 +27,10 @@ router.get('/:buscar',async(req,res)=>{
         //     });
         //     let newResult = await Search.findAll()
         //     res.send(newResult)
-        const busquedaTotal = await BusquedaApi(buscar)
-        res.send({solucion:"no se encuentra la solucion de esto"})
+
+        // const busquedaTotal = await BusquedaApi(buscar)
+        res.send({solucion:buscar})
+        
         // }else{
         //     await Search.destroy({
         //         truncate:true
