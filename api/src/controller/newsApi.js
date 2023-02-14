@@ -240,14 +240,8 @@ const infoTotal = async() =>{
 // console.log(YOUR_API_KEY);
 // NoticiasApi()
 
-const totalResultado = async() =>{
-    const resultado = await BusquedaApi()
-    return resultado
-}
-
 module.exports = {
     BusquedaApi,
     totalResultado,
     infoTotal,
-    busquedaNEW
 }
