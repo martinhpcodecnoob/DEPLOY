@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const {BusquedaApi} = require('../controller/newsApi.js')
+const {BusquedaApi,infoTotal} = require('../controller/newsApi.js')
 const {Search} = require('../db.js')
 
 const router = Router();
@@ -30,7 +30,7 @@ router.get('/:buscar',async(req,res)=>{
 
         // const busquedaTotal = await BusquedaApi(buscar)
         
-        const busquedaTotal = await BusquedaApi()
+        const busquedaTotal = await infoTotal()
         if (!busquedaTotal) {
             res.send(400).send({error:"Algo anda mal"})
         }else{
