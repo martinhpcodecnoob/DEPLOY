@@ -42,7 +42,7 @@ router.get('/:buscar',async(req,res)=>{
                             publishedAt: "2023",
                         }
                     })
-        let comprobarBDsearch = await Search.findAll()ç
+        let comprobarBDsearch = await Search.findAll()
         res.send(comprobarBDsearch)
 
         // }else{
