@@ -209,6 +209,7 @@ const BusquedaApi = async(busqueda) => {
                 publishedAt:element.publishedAt ? fechaHora(element.publishedAt) : "",
             }
         })
+        // console.log(API);
         return API
     } catch (error) {
         let arrayError = [{
@@ -233,6 +234,11 @@ const infoTotal = async() =>{
     return newTotal
 }
 
+const busquedaNEW =async(busqueda) =>{
+    const resultado =await BusquedaApi(busqueda)
+    return resultado
+}
+
 // infoTotal();
 // NoticiasApi();
 // console.log(YOUR_API_KEY);
@@ -247,4 +253,5 @@ module.exports = {
     BusquedaApi,
     totalResultado,
     infoTotal,
+    busquedaNEW
 }
