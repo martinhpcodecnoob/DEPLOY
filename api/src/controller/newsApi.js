@@ -195,7 +195,7 @@ const BusquedaApi = async(busqueda) => {
         const extractApi = await axios({
             method:'GET',
             url:`https://newsapi.org/v2/everything?q=${busqueda}&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
-        }).catch((e) => console.log(e))
+        })
 
         const API = await extractApi.data.articles.map((element) => {
             return{
@@ -234,10 +234,6 @@ const infoTotal = async() =>{
     return newTotal
 }
 
-const busquedaNEW =async(busqueda) =>{
-    const resultado =await BusquedaApi(busqueda)
-    return resultado
-}
 
 // infoTotal();
 // NoticiasApi();

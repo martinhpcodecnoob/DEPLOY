@@ -1,10 +1,6 @@
 const { Router } = require("express");
-// const {busquedaNEW} = require('../controller/newsApi.js')
+const {busquedaNEW} = require('../controller/newsApi.js')
 const {Search} = require('../db.js')
-
-const {add_subtract_days} = require('../controller/utils')
-require('dotenv').config({path:'../../.env'});
-const {YOUR_API_KEY} = process.env;
 
 const router = Router();
 
@@ -34,6 +30,8 @@ router.get('/:buscar',async(req,res)=>{
 
         // const busquedaTotal = await BusquedaApi(buscar)
         
+        const busquedaTotal = await BusquedaApi(buscar)
+        res.send(busquedaTotal)
 
         // }else{
         //     await Search.destroy({
@@ -58,17 +56,7 @@ router.get('/:buscar',async(req,res)=>{
         //     res.send(newResult)
         // }
 
-            const fechaActual = add_subtract_days(-2)
-    
-                await axios({
-                    method:'GET',
-                    url:`https://newsapi.org/v2/everything?q=${buscar}&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
-                })
-                .then(response => res.send(response.data))
-                .catch((e) => console.log(e))
-                
-    
-        
+
     } catch (error) {
         res.status(400).send({error:error})
     }
