@@ -190,7 +190,7 @@ const NegociosApi = async() => {
 }
 
 const BusquedaApi = async(busqueda) => {
-    const fechaActual = add_subtract_days(-2)
+    const fechaActual = add_subtract_days(0)
     try {
         const extractApi = await axios({
             method:'GET',
