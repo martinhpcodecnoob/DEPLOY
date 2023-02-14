@@ -31,7 +31,11 @@ router.get('/:buscar',async(req,res)=>{
         // const busquedaTotal = await BusquedaApi(buscar)
         
         const busquedaTotal = await BusquedaApi()
-        res.send(busquedaTotal)
+        if (!busquedaTotal) {
+            res.send(400).send({error:"Algo anda mal"})
+        }else{
+            res.send(busquedaTotal)
+        }
 
         // }else{
         //     await Search.destroy({
