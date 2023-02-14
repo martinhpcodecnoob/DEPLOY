@@ -60,24 +60,13 @@ router.get('/:buscar',async(req,res)=>{
 
             const fechaActual = add_subtract_days(-2)
     
-                const extractApi = await axios({
+                await axios({
                     method:'GET',
                     url:`https://newsapi.org/v2/everything?q=${buscar}&from=${fechaActual}&sortBy=popularity&apiKey=${YOUR_API_KEY}`
-                }).catch((e) => console.log(e))
-        
-                const API = await extractApi.data.articles.map((element) => {
-                    return{
-                        category: 'busqueda',
-                        name:element.source.name ? element.source.name.slice(0,254): "",
-                        author:element.author ? element.author.slice(0,254) : "",
-                        title:element.title ? element.title.slice(0,254) : "",
-                        description: element.description ? element.description.slice(0,254):"",
-                        url:element.url ? element.url : "",
-                        urlToImage: element.urlToImage ? element.urlToImage : "",
-                        publishedAt:element.publishedAt ? fechaHora(element.publishedAt) : "",
-                    }
                 })
-            res.send(API)
+                .then(response => res.send(response.data))
+                .catch((e) => console.log(e))
+                
     
         
     } catch (error) {
