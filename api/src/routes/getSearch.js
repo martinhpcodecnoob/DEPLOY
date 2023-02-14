@@ -29,21 +29,8 @@ router.get('/:buscar',async(req,res)=>{
         //     res.send(newResult)
 
         // const busquedaTotal = await BusquedaApi(buscar)
-        await Search.findOrCreate({
-                        where:{
-                            id:1,
-                            category:"muertes",
-                            name:"Giovanni",
-                            author: "Giovanni",
-                            title: "hp",
-                            description: "alto y pepom",
-                            url: "http",
-                            urlToImage: "image",
-                            publishedAt: "2023",
-                        }
-                    })
-        let comprobarBDsearch = await Search.findAll()
-        res.send(comprobarBDsearch)
+        const busquedaTotal = await BusquedaApi(buscar)
+        res.send(busquedaTotal)
 
         // }else{
         //     await Search.destroy({
