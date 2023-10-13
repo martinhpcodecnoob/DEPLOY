@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import store from './redux/store'
 import axios from 'axios'
-axios.defaults.baseURL= 'https://deploy-production-534d.up.railway.app/'
+// axios.defaults.baseURL= 'https://deploy-production-534d.up.railway.app/'
+axios.defaults.baseURL= 'https://9h4gv366-3002.brs.devtunnels.ms/'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
