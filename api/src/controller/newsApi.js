@@ -5,7 +5,7 @@ const {YOUR_API_KEY} = process.env;
 const {fechaHora,add_subtract_days,eliminarTituloRepit} = require('./utils.js')
 
 const NoticiasApi = async() => {
-    const fechaActual = add_subtract_days(0)
+    const fechaActual = add_subtract_days(-1)
     try {
 
         const extractApi = await axios({
@@ -36,7 +36,7 @@ const NoticiasApi = async() => {
 }
 
 const EconomiaApi = async() => {
-    const fechaActual = add_subtract_days(0)
+    const fechaActual = add_subtract_days(-1)
     try {
         const extractApi = await axios({
             method:'GET',
@@ -67,7 +67,7 @@ const EconomiaApi = async() => {
 }
 
 const PoliticaApi = async() => {
-    const fechaActual = add_subtract_days(0)
+    const fechaActual = add_subtract_days(-1)
     try {
         const extractApi = await axios({
             method:'GET',
@@ -98,7 +98,7 @@ const PoliticaApi = async() => {
 }
 
 const ActualidadApi = async() => {
-    const fechaActual = add_subtract_days(0)
+    const fechaActual = add_subtract_days(-1)
     try {
         const extractApi = await axios({
             method:'GET',
@@ -128,7 +128,7 @@ const ActualidadApi = async() => {
 }
 
 const CulturaApi = async() => {
-    const fechaActual = add_subtract_days(0)
+    const fechaActual = add_subtract_days(-1)
     try {
         const extractApi = await axios({
             method:'GET',
@@ -159,7 +159,7 @@ const CulturaApi = async() => {
 }
 
 const NegociosApi = async() => {
-    const fechaActual = add_subtract_days(0)
+    const fechaActual = add_subtract_days(-1)
     try {
         const extractApi = await axios({
             method:'GET',
@@ -190,7 +190,7 @@ const NegociosApi = async() => {
 }
 
 const BusquedaApi = async(busqueda) => {
-    const fechaActual = add_subtract_days(0)
+    const fechaActual = add_subtract_days(-1)
     try {
         const extractApi = await axios({
             method:'GET',
